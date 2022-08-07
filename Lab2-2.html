@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <form>
+            <fieldset>
+                <h3>แบบฟอร์มจองทัวร์</h3>
+                <fieldset>
+                    <legend><b>ข้อมูลทั่วไป</b></legend>
+                    <b>ชื่อ-สกุล:</b><br>
+                    <input type="text" placeholder="กรอกชื่อ-นามสกุล" pattern="([A-Za-z]+([ ])[A-Za-z]+|[กขฃคฅฆงจฉชซฌญฎฏฐฑฒณดตถทธนบปผฝพฟภมยรฤลฦวศษสหฬอฮฯะัาำิีึืฺุูเแโใไๅๆ็่้๊๋์]+[ ][กขฃคฅฆงจฉชซฌญฎฏฐฑฒณดตถทธนบปผฝพฟภมยรฤลฦวศษสหฬอฮฯะัาำิีึืฺุูเแโใไๅๆ็่้๊๋์]+)" required> *<br>
+                    <b>Email :</b><br>
+                    <input type="email" required> *<br>
+                    <b>โทรศัพท์ :</b><br>
+                    <input type="tel" value="+66" pattern="([+][6][6]\d{9}|\d{10}|[+][6][6]\d{10})" required> *<br>
+                    <b>ที่อยู่:</b><br>
+                    <textarea style="width:250px; height:50px;"></textarea></textarea><br>
+                    <b>รหัสไปรษณีย์: </b>
+                    <input type="text" size="4" pattern="\d{5}" maxlength="5"><br>
+                    <b>รูปผู้จอง :</b>
+                    <input type="file">
+                </fieldset>
+                <br>
+                <fieldset>
+                    <legend><b>ข้อมูลเข้าสู่ระบบ</b></legend>
+                    <b>Username:</b><br>
+                    <input type="text" pattern="[A-Za-z0-9_]+" minlength="8"><br>
+                    <b><i>ประกอบด้วยตัวเลข ตัวอักษร หรือ_ตั้งแต่ 8 ตัวขึ้นไป</i></b><br><br>
+                    <b>Password :</b><br>
+                    <input type="text" minlength="8"><br>
+                    <b><i>ประกอบด้วยอักขระอะไรก็ได้ 8 ตัวขึ้นไป</i></b><br>
+                </fieldset>
+                <br>
+                <fieldset>
+                    <legend><b>ข้อมูลทัวร์ที่ต้องการ</b></legend>
+                    <b>แพคเกจทัวร์ :</b>
+                    <select name="country" id="country-select" size="1">
+                        <option value="">--Select--</option>
+                        <option value="Thailand">Thailand</option>
+                        <option value="Austria">Austria</option>
+                        <option value="Japan">Japan</option>
+                        <option value="Hongkong">Hongkong</option>
+                        <option value="Singapore">Singapore</option>
+                    </select><br>
+                    <b>วันที่เดินทาง :</b>
+                    <input type="date"><br>
+                    <b>จำนวนผู้เดินทาง :</b>
+                    <input type="number" min="1" max="10"><br>
+                    <b>เน้นการท่องเที่ยวแบบใด?</b><br>
+                    <input type="checkbox">
+                    <label> ชอปปิ้ง</label><br>
+                    <input type="checkbox">
+                    <label> ธรรมชาติ</label><br>
+                    <input type="checkbox">
+                    <label> ทะเล</label>
+                </fieldset>
+                <br>
+                <b>ยอมรับเงื่อนไขและข้อตกลง</b>
+                <input type="radio" name="dicission" checked="checked">
+                <label>I agree</label>
+                <input type="radio" name="dicission">
+                <label>I disagree</label>
+                <input type="submit" value="จอง">
+            </fieldset>
+        </form>
+    </body>
+</html>
+
+<!--([-])-->
+<!--pattern="([A-Za-z]|\d|[_])+"-->
